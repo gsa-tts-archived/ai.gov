@@ -6,12 +6,12 @@
     "view-report": "turbo run view-report"
   },
   "devDependencies": {
-    "prettier": "^3.5.0",
+    "prettier": "^3.5.3",
     "turbo": "^2.5.2",
     "typescript": "5.7.3"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }
