@@ -2,6 +2,10 @@
   "name": "vitest",
   "private": true,
   "scripts": {
+    "clean:modules": "find $(git rev-parse --show-toplevel) -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "clean:dist": "find $(git rev-parse --show-toplevel) -name 'dist' -type d -prune -exec rm -rf '{}' +",
+    "format": "prettier --write \"{packages,apps}/*/src/**/*.{js,jsx,ts,tsx,scss,css,astro}\"",
+    "lint": "turbo run lint",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "test": "turbo run test",
