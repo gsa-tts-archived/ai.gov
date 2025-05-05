@@ -9,7 +9,10 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "test": "turbo run test",
-    "view-report": "turbo run view-report"
+    "view-report": "turbo run view-report",
+    "dev:astro": "pnpm --filter astro-site dev",
+    "build:astro": "pnpm --filter astro-site build",
+    "preview:astro": "pnpm --filter astro-site preview"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
