@@ -2,6 +2,8 @@
   "name": "vitest",
   "private": true,
   "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
     "test": "turbo run test",
     "view-report": "turbo run view-report"
   },
