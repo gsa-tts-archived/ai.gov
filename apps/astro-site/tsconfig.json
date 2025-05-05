@@ -1,0 +1,15 @@
+{
+  "extends": "../../packages/typescript-config/base.json", // Extend the shared monorepo config
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "baseUrl": ".", // Required for relative imports
+    "paths": {
+      "@ui/*": ["../../packages/ui/src/*"] // Alias for shared UI components
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro", ".astro/types.d.ts"],
+  "exclude": ["dist", "node_modules"]
+}
