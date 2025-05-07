@@ -2,10 +2,11 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
-  "exports": {
-    "./*": "./src/*.tsx"
-  },
+  "files": [
+   "static"
+  ],
   "scripts": {
+    "build": "gulp update",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit"
@@ -17,10 +18,13 @@
     "@types/node": "^22.13.0",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
+    "@uswds/compile": "1.2.2",
     "eslint": "^9.21.0",
+    "gulp": "^5.0.0",
     "typescript": "5.7.3"
   },
   "dependencies": {
+    "@uswds/uswds": "3.12.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }

@@ -1,0 +1,11 @@
+@use "uswds-core" with (
+  $theme-show-notifications: false,
+  $theme-banner-max-width: "full",
+  $theme-footer-max-width: "full",
+  $theme-grid-container-max-width: "full",
+  $theme-header-max-width: "none",
+  $theme-utility-breakpoints: (
+    "mobile": true,
+    "mobile-lg": true
+  ),
+);
