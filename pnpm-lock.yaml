@@ -32,10 +32,16 @@ importers:
       astro:
         specifier: ^5.7.10
         version: 5.7.10(@types/node@22.13.0)(rollup@4.40.1)(sass-embedded@1.83.4)(typescript@5.7.3)
+      purgecss:
+        specifier: ^7.0.2
+        version: 7.0.2
       svelte:
         specifier: ^5.28.2
         version: 5.28.2
     devDependencies:
+      astro-purgecss:
+        specifier: ^5.2.2
+        version: 5.2.2(astro@5.7.10(@types/node@22.13.0)(rollup@4.40.1)(sass-embedded@1.83.4)(typescript@5.7.3))(purgecss@7.0.2)
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
@@ -1251,6 +1257,12 @@ packages:
     resolution: {integrity: sha512-x1FCFnFifvYDDzTaLII71vG5uvDwgtmDTEVWAxrgeiR8VjMONcCXJx7E+USjDtHlwFmt9MysbqgF9b9Vjr6w+w==}
     engines: {node: '>=4'}
 
+  astro-purgecss@5.2.2:
+    resolution: {integrity: sha512-lL4JqBlIyRTj6CQPJrGRWJYX6OzyGBEGjLwxmgSHALn0xKsU0zf9X4Lnd+L+SM0wa+o7UbD9wXMhmK42sjXl8g==}
+    peerDependencies:
+      astro: ^5.0.0
+      purgecss: ^7.0.0
+
   astro@5.7.10:
     resolution: {integrity: sha512-9TQcFZqP2w6//JXXUHfw8/5PX7KUx9EkG5O3m+hISuyeUztvjY1q5+p7+C5HiXyg24Zs3KkpieoL5BGRXGCAGA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
@@ -1547,6 +1559,10 @@ packages:
   commander@10.0.1:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
+
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
 
   common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
@@ -3456,6 +3472,10 @@ packages:
       ts-node:
         optional: true
 
+  postcss-selector-parser@6.1.2:
+    resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
+    engines: {node: '>=4'}
+
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
@@ -3514,6 +3534,10 @@ packages:
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+
+  purgecss@7.0.2:
+    resolution: {integrity: sha512-4Ku8KoxNhOWi9X1XJ73XY5fv+I+hhTRedKpGs/2gaBKU8ijUiIKF/uyyIyh7Wo713bELSICF5/NswjcuOqYouQ==}
+    hasBin: true
 
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
@@ -6013,6 +6037,11 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  astro-purgecss@5.2.2(astro@5.7.10(@types/node@22.13.0)(rollup@4.40.1)(sass-embedded@1.83.4)(typescript@5.7.3))(purgecss@7.0.2):
+    dependencies:
+      astro: 5.7.10(@types/node@22.13.0)(rollup@4.40.1)(sass-embedded@1.83.4)(typescript@5.7.3)
+      purgecss: 7.0.2
+
   astro@5.7.10(@types/node@22.13.0)(rollup@4.40.1)(sass-embedded@1.83.4)(typescript@5.7.3):
     dependencies:
       '@astrojs/compiler': 2.12.0
@@ -6443,6 +6472,8 @@ snapshots:
   comma-separated-tokens@2.0.3: {}
 
   commander@10.0.1: {}
+
+  commander@12.1.0: {}
 
   common-ancestor-path@1.0.1: {}
 
@@ -8854,6 +8885,11 @@ snapshots:
       postcss: 8.5.2
       ts-node: 10.9.2(@types/node@22.13.0)(typescript@5.7.3)
 
+  postcss-selector-parser@6.1.2:
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+
   postcss-value-parser@4.2.0: {}
 
   postcss@8.5.2:
@@ -8917,6 +8953,13 @@ snapshots:
   proxy-from-env@1.1.0: {}
 
   punycode@2.3.1: {}
+
+  purgecss@7.0.2:
+    dependencies:
+      commander: 12.1.0
+      glob: 11.0.1
+      postcss: 8.5.3
+      postcss-selector-parser: 6.1.2
 
   queue-microtask@1.2.3: {}
 

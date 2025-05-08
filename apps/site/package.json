@@ -12,9 +12,11 @@
     "@astrojs/svelte": "^7.0.13",
     "@repo/ui": "workspace:*",
     "astro": "^5.7.10",
+    "purgecss": "^7.0.2",
     "svelte": "^5.28.2"
   },
   "devDependencies": {
+    "astro-purgecss": "^5.2.2",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
