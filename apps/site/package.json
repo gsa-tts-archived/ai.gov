@@ -15,6 +15,8 @@
     "svelte": "^5.28.2"
   },
   "devDependencies": {
-    "prettier-plugin-astro": "^0.14.1"
+    "astro-purgecss": "^5.2.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "purgecss": "^7.0.2"
   }
 }
