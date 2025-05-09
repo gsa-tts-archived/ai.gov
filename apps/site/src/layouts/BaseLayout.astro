@@ -4,13 +4,16 @@ import UsaBanner from '../components/UsaBanner.astro';
 import UsaSkipNav from '../components/UsaSkipNav.astro';
 import Footer from '../components/Footer.astro';
 import Head from '../components/Head.astro';
+import { siteName } from '../../constants';
+
+const { title = siteName, ...props } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <Head />
+    <Head title={title} />
   </head>
   <body>
     <slot name="skip-nav" />

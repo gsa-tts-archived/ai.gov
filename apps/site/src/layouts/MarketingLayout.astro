@@ -1,9 +1,12 @@
 ---
 import AgencyFooter from '../components/AgencyFooter.astro';
 import BaseLayout from './BaseLayout.astro';
+import { siteName } from '../../constants';
+
+const { title = siteName, ...props } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout title={title}>
   <slot />
   <AgencyFooter />
 </BaseLayout>
