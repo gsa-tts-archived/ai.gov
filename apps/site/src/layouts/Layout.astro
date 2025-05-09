@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import UsaBanner from '../components/UsaBanner.astro';
+import UsaSkipNav from '../components/UsaSkipNav.astro';
+const { title = 'ai.gov', ...props } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,7 +12,7 @@ import UsaBanner from '../components/UsaBanner.astro';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>AI.gov</title>
+    <title>{title}</title>
     <script is:inline>
       if ('performance' in window) {
         performance.mark('gsa:documenthead:start');
@@ -28,6 +30,7 @@ import UsaBanner from '../components/UsaBanner.astro';
     </script>
   </head>
   <body>
+    <slot name="skip-nav" />
     <UsaBanner />
     <slot />
   </body>
