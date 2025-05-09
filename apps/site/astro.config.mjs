@@ -56,7 +56,7 @@ export default defineConfig({
     fonts: [
       {
         name: 'Archivo',
-        cssVariable: 'archivo', // Creates --font-archivo CSS variable
+        cssVariable: '--font-archivo', // Creates --font-archivo CSS variable
         provider: 'local', // Serves fonts locally
         variants: [
           {
