@@ -1,0 +1,23 @@
+---
+import '../styles/global.css';
+import UsaBanner from '../components/UsaBanner.astro';
+import UsaSkipNav from '../components/UsaSkipNav.astro';
+import Footer from '../components/Footer.astro';
+import Head from '../components/Head.astro';
+import { getPageTitle } from '../helpers/meta';
+
+const title = getPageTitle(Astro);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <Head title={title} />
+  </head>
+  <body>
+    <slot name="skip-nav" />
+    <UsaBanner />
+    <slot />
+  </body>
+</html>

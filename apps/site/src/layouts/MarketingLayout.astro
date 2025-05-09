@@ -1,0 +1,12 @@
+---
+import AgencyFooter from '../components/AgencyFooter.astro';
+import BaseLayout from './BaseLayout.astro';
+import { getPageTitle } from '../helpers/meta';
+
+const title = getPageTitle(Astro);
+---
+
+<BaseLayout title={title}>
+  <slot />
+  <AgencyFooter />
+</BaseLayout>

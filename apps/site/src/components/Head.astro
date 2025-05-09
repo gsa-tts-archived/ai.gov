@@ -1,0 +1,24 @@
+---
+import { siteName } from '../../constants';
+const { title } = Astro.props;
+---
+
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<script is:inline>
+  if ('performance' in window) {
+    performance.mark('gsa:documenthead:start');
+  }
+</script>
+<script is:inline src="/uswds/js/uswds-init.min.js"></script>
+<script>
+  import '@repo/ui/static/uswds/js/uswds.js';
+</script>
+<!-- This belongs at the very bottom of the head -->
+<script is:inline>
+  if ('performance' in window) {
+    performance.mark('gsa:documenthead:end');
+  }
+</script>

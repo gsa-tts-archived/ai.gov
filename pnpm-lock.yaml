@@ -45,6 +45,9 @@ importers:
       purgecss:
         specifier: ^7.0.2
         version: 7.0.2
+      vitest:
+        specifier: ^3.0.7
+        version: 3.0.7(@types/debug@4.1.12)(@types/node@22.13.0)(@vitest/ui@3.0.7)(jsdom@26.0.0)(sass-embedded@1.83.4)
 
   packages/eslint-config:
     devDependencies:
