@@ -1,9 +1,9 @@
 ---
 import AgencyFooter from '../components/AgencyFooter.astro';
 import BaseLayout from './BaseLayout.astro';
-import { siteName } from '../../constants';
+import { getPageTitle } from '../helpers/meta';
 
-const title = Astro.props.title || siteName;
+const title = getPageTitle(Astro);
 ---
 
 <BaseLayout title={title}>
