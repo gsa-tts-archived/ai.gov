@@ -2,36 +2,20 @@
 import '../styles/global.css';
 import UsaBanner from '../components/UsaBanner.astro';
 import UsaSkipNav from '../components/UsaSkipNav.astro';
-const { title = 'ai.gov', ...props } = Astro.props;
+import Footer from '../components/Footer.astro';
+import Head from '../components/Head.astro';
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <script is:inline>
-      if ('performance' in window) {
-        performance.mark('gsa:documenthead:start');
-      }
-    </script>
-    <script is:inline src="/uswds/js/uswds-init.min.js"></script>
-    <script>
-      import '@repo/ui/static/uswds/js/uswds.js';
-    </script>
-    <!-- This belongs at the very bottom of the head -->
-    <script is:inline>
-      if ('performance' in window) {
-        performance.mark('gsa:documenthead:end');
-      }
-    </script>
+    <Head />
   </head>
   <body>
     <slot name="skip-nav" />
     <UsaBanner />
     <slot />
+    <Footer />
   </body>
 </html>

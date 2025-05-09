@@ -1,0 +1,126 @@
+---
+import { Image } from 'astro:assets';
+import { siteName } from '../../constants';
+---
+
+<footer id="footer" class="usa-footer">
+  <div class="usa-identifier usa-footer__primary padding-bottom-0">
+    <div class="grid-container usa-footer__primary-content maxw-desktop">
+      <div class="grid-row padding-top-0 padding-bottom-3">
+        <div class="GSAFooter">
+          <section
+            aria-label="Agency identifier,"
+            class="usa-identifier__section usa-identifier__section--masthead"
+          >
+            <div class="align-center display-flex maxw-desktop">
+              <div class="usa-identifier__logos">
+                <a
+                  href="https://gsa.gov"
+                  class="usa-identifier__logo GSAFooter__logo"
+                >
+                  <Image
+                    src=`/images/gsa-logo.svg`
+                    alt="GSA.gov home."
+                    width="60"
+                    height="60"
+                  />
+                </a>
+              </div>
+              <div
+                class="usa-identifier__identity"
+                aria-label="Agency description"
+              >
+                <p class="usa-identifier__identity-domain">{siteName}</p>
+                <p class="usa-identifier__identity-disclaimer">
+                  An official website of the
+                  <a href="https://gsa.gov/">General Services Administration</a>
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <nav
+        aria-label="Important links,"
+        class="usa-identifier__section usa-identifier__section--required-links"
+      >
+        <div class="align-center display-flex maxw-desktop">
+          <ul class="usa-identifier__required-links-list">
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="https://www.gsa.gov/about-us"
+                class="usa-identifier__required-link usa-link">About GSA</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="https://www.gsa.gov/vulnerability-disclosure-policy"
+                class="usa-identifier__required-link usa-link"
+                >Vulnerability Disclosure Policy</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="https://www.gsa.gov/website-information/accessibility-statement"
+                class="usa-identifier__required-link usa-link"
+                >Accessibility statement</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="https://www.gsa.gov/reference/freedom-of-information-act-foia"
+                class="usa-identifier__required-link usa-link">FOIA requests</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="https://www.gsa.gov/reference/civil-rights-programs/notification-and-federal-employee-antidiscrimination-and-retaliation-act-of-2002"
+                class="usa-identifier__required-link usa-link"
+                >No FEAR Act data</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="https://www.gsaig.gov/"
+                class="usa-identifier__required-link usa-link"
+                >Office of the Inspector General</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="https://www.gsa.gov/reference/reports/budget-performance"
+                class="usa-identifier__required-link usa-link"
+                >Performance reports</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="/privacy-policy/"
+                class="usa-identifier__required-link usa-link">Privacy policy</a
+              >
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a
+                href="mailto:10x@gsa.gov"
+                class="usa-identifier__required-link usa-link"
+                rel="noopener noreferrer"
+                target="_blank">Email Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <section
+      aria-label="U.S. government information and services,"
+      class="usa-identifier__section usa-identifier__section--usagov margin-top-105 padding-bottom-105 maxw-desktop grid-container"
+    >
+      <div class="align-center display-flex maxw-desktop">
+        <div class="usa-identifier__usagov-description">
+          Looking for U.S. government information and services?&nbsp;
+        </div>
+        <a href="https://www.usa.gov/" class="usa-link">Visit USA.gov</a>
+      </div>
+    </section>
+  </div>
+</footer>
