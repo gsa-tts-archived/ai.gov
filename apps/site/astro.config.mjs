@@ -56,16 +56,16 @@ export default defineConfig({
     fonts: [
       {
         name: 'Archivo',
-        cssVariable: '--font-archivo', // Creates --font-archivo CSS variable
+        cssVariable: '--ai-font-family-sans', // Scoped variable name
         provider: 'local', // Serves fonts locally
         variants: [
           {
-            src: [{ url: './public/fonts/archivo-regular.woff2' }],
+            src: [{ url: './src/fonts/archivo-regular.woff2' }],
             weight: 400,
             style: 'normal',
           },
           {
-            src: [{ url: './public/fonts/archivo-semibold.woff2' }],
+            src: [{ url: './src/fonts/archivo-semibold.woff2' }],
             weight: 600,
             style: 'normal',
           },
