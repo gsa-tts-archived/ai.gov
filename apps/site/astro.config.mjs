@@ -14,29 +14,29 @@ export default defineConfig({
     svelte(),
     // purgecss should go last
     purgecss({
-      fontFace: true,
-      keyframes: true,
+      fontFace: true, // Removes unused @font-face rules
+      keyframes: true, // Removes unused keyframes
       safelist: {
         standard: [
-            /abbr/,
-            "kbd",
-            "samp",
-            "sub",
-            "optgroup",
-            "fieldset",
-            "summary",
-            "cite",
-            "dfn",
-            "pre",
+          /abbr/,
+          "kbd",
+          "samp",
+          "sub",
+          "optgroup",
+          "fieldset",
+          "summary",
+          "cite",
+          "dfn",
+          "pre",
         ],
         deep: [
-            /usa-in-page.+/
-        ]
+          /usa-in-page.+/,
+        ],
       },
       dynamicAttributes: [
-          "contentEditable",
-          "title",
-          "type"
+        "contentEditable",
+        "title",
+        "type",
       ],
       blocklist: [],
       content: [
@@ -46,8 +46,31 @@ export default defineConfig({
       extractors: [
         {
           extractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-          extensions: ['astro', 'html']
-        }
-      ]
-    })],
+          extensions: ['astro', 'html'],
+        },
+      ],
+    }),
+  ],
+  experimental: {
+    // Astro Experimental Fonts API for managing custom fonts
+    fonts: [
+      {
+        name: 'Archivo',
+        cssVariable: 'archivo', // Creates --font-archivo CSS variable
+        provider: 'local', // Serves fonts locally
+        variants: [
+          {
+            src: [{ url: './public/fonts/archivo-regular.woff2' }],
+            weight: 400,
+            style: 'normal',
+          },
+          {
+            src: [{ url: './public/fonts/archivo-semibold.woff2' }],
+            weight: 600,
+            style: 'normal',
+          },
+        ],
+      },
+    ],
+  },
 });
