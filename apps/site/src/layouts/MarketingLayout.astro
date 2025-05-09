@@ -3,7 +3,7 @@ import AgencyFooter from '../components/AgencyFooter.astro';
 import BaseLayout from './BaseLayout.astro';
 import { siteName } from '../../constants';
 
-const { title = siteName, ...props } = Astro.props;
+const title = Astro.props.title || siteName;
 ---
 
 <BaseLayout title={title}>
